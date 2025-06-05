@@ -10,6 +10,8 @@ import kotlinx.coroutines.runBlocking
 
 data class Item(val name: String, val price: Double)
 
+// SharedFlow provides a centralized way to share updates efficiently.
+// We can witness multiple observers at the same time.
 fun main() = runBlocking {
     val cartItems = MutableSharedFlow<List<Item>>()
 

@@ -6,6 +6,7 @@ import kotlinx.coroutines.runBlocking
 
 enum class PlayerState { Playing, Paused, Stopped }
 
+// StateFlow provides a single source of truth for this state, with an initial value.
 fun main() = runBlocking {
     val playerState = MutableStateFlow(PlayerState.Stopped)
     launch {
